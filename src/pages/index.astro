@@ -1,81 +1,178 @@
 ---
+import Section from '../components/Section.astro';
+import LandingHeader from '../components/LandingHeader.astro';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+<Layout title="Tesla el coche de tus sueños (y de Elon Musk).">
+	<LandingHeader />
+
+	<main class="snap-y snap-mandatory relative w-full h-screen overflow-y-auto overflow-x-hidden scroll-smooth">
+		<!-- Home -->
+		<div class="snap-center">
+			<Section color="white" title="Disfrute de Tesla" subtitle="Programe una prueba de conducción hoy mismo">
+				<div slot="footer">
+					<a
+						class="border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-base text-white px-14 py-3 inline-block hover:bg-white hover:text-black transition-colors"
+						href="#"
+					>
+						Prueba de conducción
+					</a>
+				</div>
+
+				<video slot="background" class="object-center object-cover h-full w-full" autoplay muted loop src="/video.webm"
+				></video>
+			</Section>
+		</div>
+
+		<!-- Model 3 -->
+		<div class="snap-center">
+			<Section color="black" title="Model 3" subtitle="Desde $32,740">
+				<div slot="footer" class="justify-end -mb-10">
+					<div class="gap-x-4 justify-center flex mx-auto mb-5">
+						<a
+							class="bg-gray-100 backdrop-blur-sm text-sm rounded font-base text-black px-14 py-3 inline-block transition-colors"
+							href="#">Explorar inventario</a
+						>
+						<a
+							class="bg-gray-700/50 text-sm rounded font-base px-14 py-3 transitions-colors inline-flex justify-center items-center text-white"
+							href="#">Pedido personalizado</a
+						>
+					</div>
+					<a class="text-xs font-base text-black" href="#"
+						>3 meses de Supercarga gratis cuando recibes un nuevo vehículo de Inventario antes del 30 de junio</a
+					>
+				</div>
+
+				<img slot="background" src="/model-3.avif" alt="Model Y" class="object-center object-cover h-full w-full" />
+			</Section>
+		</div>
+
+		<!-- Model Y -->
+		<div class="snap-center">
+			<Section color="black" title="Model Y" subtitle="Desde $40,240">
+				<div slot="footer" class="gap-x-4 flex mx-auto">
+					<a
+						class="bg-gray-100 backdrop-blur-sm text-sm rounded font-base text-black px-14 py-3 inline-block transition-colors"
+						href="#">Explorar inventario</a
+					>
+					<a
+						class="bg-gray-700/50 text-sm rounded font-base px-14 py-3 transitions-colors inline-flex justify-center items-center text-white"
+						href="#">Pedido personalizado</a
+					>
+				</div>
+
+				<img slot="background" src="/model-y.avif" alt="Model Y" class="object-center object-cover h-full w-full" />
+			</Section>
+		</div>
+
+		<!-- Model S -->
+		<div class="snap-center">
+			<Section color="black" title="Model S" subtitle="Explorar inventario">
+				<div slot="footer" class="gap-x-4 flex mx-auto">
+					<a
+						class="bg-gray-100 backdrop-blur-sm text-sm rounded font-base text-black px-14 py-3 inline-block transition-colors"
+						href="#">Orden personalizado</a
+					>
+					<a
+						class="bg-gray-700/50 text-sm rounded font-base px-14 py-3 transitions-colors inline-flex justify-center items-center text-white"
+						href="#">Unidad de demostración</a
+					>
+				</div>
+
+				<img slot="background" src="/model-s.avif" alt="Model Y" class="object-center object-cover h-full w-full" />
+			</Section>
+		</div>
+
+		<!-- Model X -->
+		<div class="snap-center">
+			<Section color="black" title="Model X" subtitle="Explorar inventario">
+				<div slot="footer" class="gap-x-4 flex mx-auto">
+					<a
+						class="bg-gray-100 backdrop-blur-sm text-sm rounded font-base text-black px-14 py-3 inline-block transition-colors"
+						href="#">Orden personalizado</a
+					>
+					<a
+						class="bg-gray-700/50 text-sm rounded font-base px-14 py-3 transitions-colors inline-flex justify-center items-center text-white"
+						href="#">Unidad de demostración</a
+					>
+				</div>
+
+				<img slot="background" src="/model-x.avif" alt="Model Y" class="object-center object-cover h-full w-full" />
+			</Section>
+		</div>
+
+		<!-- Solar Panels -->
+		<div class="snap-center">
+			<Section color="black" title="Paneles Solares" subtitle="Programe una consulta virtual">
+				<div slot="footer" class="gap-x-4 flex mx-auto">
+					<a
+						class="bg-gray-100 backdrop-blur-sm text-sm rounded font-base text-black px-14 py-3 inline-block transition-colors"
+						href="#">Ordenar Ahora</a
+					>
+					<a
+						class="bg-gray-700/50 text-sm rounded font-base px-14 py-3 transitions-colors inline-flex justify-center items-center text-white"
+						href="#">Aprende Más</a
+					>
+				</div>
+
+				<img
+					slot="background"
+					src="/solar-panels.avif"
+					alt="Model Y"
+					class="object-center object-cover h-full w-full"
+				/>
+			</Section>
+		</div>
+
+		<!-- Solar Roof -->
+		<div class="snap-center">
+			<Section color="black" title="Techo Solar" subtitle="Produzca energía limpia desde su techo">
+				<div slot="footer" class="gap-x-4 flex mx-auto">
+					<a
+						class="bg-gray-100 backdrop-blur-sm text-sm rounded font-base text-black px-14 py-3 inline-block transition-colors"
+						href="#">Ordenar Ahora</a
+					>
+					<a
+						class="bg-gray-700/50 text-sm rounded font-base px-14 py-3 transitions-colors inline-flex justify-center items-center text-white"
+						href="#">Aprende Más</a
+					>
+				</div>
+
+				<img slot="background" src="/solar-roof.avif" alt="Model Y" class="object-center object-cover h-full w-full" />
+			</Section>
+		</div>
+
+		<!-- Powerwall -->
+		<div class="snap-center">
+			<Section color="black" title="Powerwall" subtitle="Explorar inventario">
+				<div slot="footer" class="gap-x-4 flex mx-auto">
+					<a
+						class="bg-gray-100 backdrop-blur-sm text-sm rounded font-base text-black px-14 py-3 inline-block transition-colors"
+						href="#">Ordenar Ahora</a
+					>
+					<a
+						class="bg-gray-700/50 text-sm rounded font-base px-14 py-3 transitions-colors inline-flex justify-center items-center text-white"
+						href="#">Aprende Más</a
+					>
+				</div>
+
+				<img slot="background" src="/powerwall.avif" alt="Model Y" class="object-center object-cover h-full w-full" />
+			</Section>
+		</div>
+
+		<!-- Accessories -->
+		<div class="snap-center">
+			<Section color="black" title="Accesorios" subtitle="">
+				<div slot="footer" class="gap-x-4 flex mx-auto">
+					<a
+						class="bg-black text-sm rounded font-base px-14 py-3 inline-flex justify-center items-center text-white"
+						href="#">Comprar Ahora</a
+					>
+				</div>
+
+				<img slot="background" src="/accessories.avif" alt="Model Y" class="object-center object-cover h-full w-full" />
+			</Section>
+		</div>
 	</main>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
